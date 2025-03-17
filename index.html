@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiterleitung...</title>
+    <script>
+        let redirectTimeout = setTimeout(function() {
+            window.location.href = "https://quizlet.com/user/bks_chur/folders";
+        }, 1500);
+
+        function stopRedirect() {
+            clearTimeout(redirectTimeout);
+            alert("Weiterleitung gestoppt. Du kannst die Seite jetzt auf dem Home-Bildschirm speichern.");
+        }
+
+        document.addEventListener("click", stopRedirect);
+        document.addEventListener("keydown", stopRedirect);
+    </script>
+
+    <link rel="icon" href="favicon.jpeg" type="image/jpg">
+    <link rel="apple-touch-icon" href="apple-icon.jpeg">
+</head>
+<body>
+    <p>Drücke auf eine Taste oder tippe auf den Bildschirm, wenn du die bks_chur Seite speichern möchtest. Ansonsten wirst du jeden Moment weitergeleitet.</p>
+    <p>Falls die Weiterleitung nicht funktioniert, klicken Sie <a href="https://quizlet.com/user/bks_chur/folders">hier</a>.</p>
+</body>
+</html>
