@@ -3,26 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weiterleitung...</title>
-    <script>
-        let redirectTimeout = setTimeout(function() {
-            window.location.href = "https://quizlet.com/user/bks_chur/folders";
-        }, 1500);
-
-        function stopRedirect() {
-            clearTimeout(redirectTimeout);
-            alert("Weiterleitung gestoppt. Sie können die Seite jetzt auf dem Home-Bildschirm speichern.");
-        }
-
-        document.addEventListener("click", stopRedirect);
-        document.addEventListener("keydown", stopRedirect);
-    </script>
-
+    <title>bks_chur</title>
     <link rel="icon" href="favicon.jpg" type="image/jpg">
     <link rel="apple-touch-icon" href="apple-icon.jpg">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        }
+
+        body {
+        background-color: #f9f9f9;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+
+        .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 200px;
+        }
+
+        .btn {
+        text-align: center;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        transition: background 0.2s ease-in-out;
+        }
+
+        .btn-hexalengua {
+        background-color: #e63946;
+        }
+
+        .btn-hexalengua:hover {
+        background-color: #c82333;
+        }
+
+        .btn-quizlet {
+        background-color: #4255FF;
+        }
+
+        .btn-quizlet:hover {
+        background-color: #2e3ccf;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Drücken Sie auf eine Taste oder tippen Sie auf den Bildschirm, wenn Sie die bks_chur Seite speichern möchten. Ansonsten werden Sie jeden Moment weitergeleitet.</p>
-    <p>Falls die Weiterleitung nicht funktioniert, klicken Sie <a href="https://quizlet.com/user/bks_chur/folders">hier</a>.</p>
+    <div class="button-container">
+        <a class="btn btn-quizlet" href="https://quizlet.com/user/bks_chur/folders" target="_blank">Quizlet</a>
+        <a class="btn btn-hexalengua" href="https://sites.google.com/view/rr-ma25/webcards-vokabeln" target="_blank">HexaLengua (webCards)</a>
+    </div>
 </body>
 </html>
